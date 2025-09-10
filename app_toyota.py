@@ -129,7 +129,7 @@ if not df.empty:
         # กรองตามประเภทเกียร์
         if transmission != 'ทั้งหมด':
             if transmission == 'อัตโนมัติ':
-                filtered = filtered[filtered['transmission'].str.contains("อัตโนมัต", case=False, na=False)]
+                filtered = filtered[filtered['transmission'].str.contains("Automatic", case=False, na=False)]
             elif transmission == 'ธรรมดา':
                 filtered = filtered[filtered['transmission'].str.contains("ธรรมดา", case=False, na=False)]
 
@@ -147,4 +147,5 @@ if not df.empty:
 else:
     # ถ้าโหลดข้อมูลไม่สำเร็จ → หยุดโปรแกรม
     st.stop()
+
 
